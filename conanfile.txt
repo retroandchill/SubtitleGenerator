@@ -2,6 +2,7 @@
 qt/5.15.9
 catch2/3.3.2
 whisper-cpp/1.2.1
+drwav/0.13.7
 ffmpeg/5.1
 
 [generators]
