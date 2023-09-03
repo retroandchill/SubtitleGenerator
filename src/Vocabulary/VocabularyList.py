@@ -4,5 +4,5 @@ from typing import List
 
 class VocabularyList(abc.ABC):
     @abc.abstractmethod
-    def gather_vocabulary(self, source: str) -> List[str]:
+    def gather_vocabulary(self) -> List[str]:
         pass
