@@ -2,3 +2,5 @@
 build/
 *.wav
 *.mp4
+*.pkf
+__pycache__

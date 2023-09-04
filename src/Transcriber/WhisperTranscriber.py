@@ -1,20 +1,16 @@
 import whisper
 
-from Vocabulary.VocabularyList import VocabularyList
-
 
 class WhisperTranscriber:
 
-    def __init__(self, model: str, vocab: VocabularyList):
+    def __init__(self, model: str):
         self.model = model
-        self.vocab = vocab
 
-    def transcribe(self, audio_file: str):
+    def transcribe(self, audio_file: str) -> str:
         model = whisper.load_model(self.model)
 
         # decode the audio
-        prompt = "\n".join(self.vocab.gather_vocabulary())
-        result = model.transcribe(audio_file, initial_prompt=prompt)
+        result = model.transcribe(audio_file)
 
         # print the recognized text
-        print(result["text"])
+        return result["text"]
